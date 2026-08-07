@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Asad Ullah — AI Systems & Automation Studio</title>
+<title>Asad Ullah — AI Systems, Automation & QA Studio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -148,6 +148,8 @@
   .card .foot { margin-top: 18px; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: var(--violet); display: flex; align-items: center; gap: 6px; }
   .card .live { display: inline-flex; align-items: center; gap: 5px; }
   .card .live::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--sky); box-shadow: 0 0 8px var(--sky); }
+  .card.qa-card { border-color: rgba(95,184,255,0.35); }
+  .card.qa-card:hover { border-color: rgba(95,184,255,0.7); }
 
   .cert-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .cert { background: linear-gradient(135deg, var(--deep), var(--panel)); border: 1px solid var(--line);
@@ -156,6 +158,9 @@
   .cert:hover { transform: translateY(-6px); border-color: rgba(139,123,255,0.4); }
   .cert-badge { width: 60px; height: 60px; border-radius: 16px; background: linear-gradient(135deg, #FF7A59, #FF9D7A);
     display: grid; place-items: center; font-size: 28px; flex-shrink: 0; box-shadow: 0 8px 24px -8px rgba(255,122,89,0.5); }
+  .cert-badge.b-blue { background: linear-gradient(135deg, #4D7CFF, #5FB8FF); box-shadow: 0 8px 24px -8px rgba(77,124,255,0.5); }
+  .cert-badge.b-violet { background: linear-gradient(135deg, #8B7BFF, #A99AFF); box-shadow: 0 8px 24px -8px rgba(139,123,255,0.5); }
+  .cert-badge.b-green { background: linear-gradient(135deg, #2EBD85, #5FE0B0); box-shadow: 0 8px 24px -8px rgba(46,189,133,0.5); }
   .cert h4 { font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 22px; margin-bottom: 8px; letter-spacing: -0.01em; line-height: 1.2; }
   .cert .issuer { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--violet); margin-bottom: 12px; }
   .cert p { color: var(--fog); font-size: 14px; line-height: 1.6; }
@@ -229,6 +234,7 @@
     <div class="nav-links">
       <a href="#services">Services</a>
       <a href="#work">Work</a>
+      <a href="#qa">QA</a>
       <a href="#certs">Certifications</a>
       <a href="#process">Process</a>
       <a href="#contact" class="nav-cta">Start a project</a>
@@ -243,13 +249,13 @@
   <div class="hero-glow"></div>
   <div class="hero-glow2"></div>
   <div class="wrap">
-    <div class="eyebrow"><span class="status-dot"></span> Available for projects · AI &amp; Automation Builder</div>
+    <div class="eyebrow"><span class="status-dot"></span> Available for projects · AI, Automation &amp; QA Builder</div>
     <h1>
       <span class="row"><span>I build the</span></span>
       <span class="row"><span><em>quiet machinery</em></span></span>
       <span class="row"><span>that runs businesses.</span></span>
     </h1>
-    <p class="hero-sub">I design AI assistants, automation systems, and websites that handle the repetitive work — so small teams move like big ones. Real systems, built to run on their own, not just slideware.</p>
+    <p class="hero-sub">I design AI assistants, automation systems, and websites that handle the repetitive work — then verify them with real automated tests. Real systems, built to run on their own and proven to work. Not just slideware.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn btn-primary">Start a project <span class="arrow">→</span></a>
       <a href="#work" class="btn btn-ghost">See the work</a>
@@ -258,9 +264,10 @@
   <div class="marquee">
     <div class="marquee-track">
       <span class="marquee-item">AI Chatbots</span><span class="marquee-item">Workflow Automation</span>
-      <span class="marquee-item">Websites</span><span class="marquee-item">CRM Systems</span>
-      <span class="marquee-item">SEO &amp; Content</span><span class="marquee-item">AI Chatbots</span>
-      <span class="marquee-item">Workflow Automation</span><span class="marquee-item">Websites</span>
+      <span class="marquee-item">QA &amp; Test Automation</span><span class="marquee-item">Websites</span>
+      <span class="marquee-item">CRM Systems</span><span class="marquee-item">SEO &amp; Content</span>
+      <span class="marquee-item">AI Chatbots</span><span class="marquee-item">Workflow Automation</span>
+      <span class="marquee-item">QA &amp; Test Automation</span><span class="marquee-item">Websites</span>
       <span class="marquee-item">CRM Systems</span><span class="marquee-item">SEO &amp; Content</span>
     </div>
   </div>
@@ -270,7 +277,7 @@
   <div class="wrap">
     <div class="sec-head fly fly-up">
       <span class="sec-tag">What I do</span>
-      <h2 class="sec-title">Five ways I help businesses <em>do more with less</em>.</h2>
+      <h2 class="sec-title">Seven ways I help businesses <em>do more with less</em>.</h2>
       <p class="sec-intro">Each of these is something I've actually built and deployed — not a service I'm guessing at. Pick one, or combine them into a complete system.</p>
     </div>
     <div class="svc-grid stag">
@@ -282,6 +289,10 @@
         <h3>Workflow Automation</h3>
         <p>Connect the tools you already use so the boring work runs itself — emails, leads, content, notifications — all wired together and quietly working in the background.</p>
         <div class="svc-tags"><span>n8n</span><span>Zapier</span><span>Make.com</span><span>APIs</span></div></div>
+      <div class="svc"><div class="svc-glow"></div><div class="svc-ico">🧪</div>
+        <h3>QA &amp; Test Automation</h3>
+        <p>Automated test suites that prove software works — end-to-end browser tests, API checks and database verification, wired into CI/CD so every change is tested automatically.</p>
+        <div class="svc-tags"><span>Playwright</span><span>PyTest</span><span>Postman</span><span>CI/CD</span></div></div>
       <div class="svc"><div class="svc-glow"></div><div class="svc-ico">🌐</div>
         <h3>Websites</h3>
         <p>Fast, modern sites with intentional design — built to load quickly, read clearly, and turn visitors into real enquiries. Deployed and ready to grow.</p>
@@ -296,8 +307,8 @@
         <div class="svc-tags"><span>Local SEO</span><span>Copy</span><span>Strategy</span></div></div>
       <div class="svc"><div class="svc-glow"></div><div class="svc-ico">✦</div>
         <h3>Complete Systems</h3>
-        <p>The real value: all of the above wired into one system. A website with an AI assistant, automated lead capture, and a CRM behind it — working as one.</p>
-        <div class="svc-tags"><span>End-to-end</span><span>Integrated</span></div></div>
+        <p>The real value: all of the above wired into one system. A website with an AI assistant, automated lead capture, a CRM behind it — and tests proving it all works.</p>
+        <div class="svc-tags"><span>End-to-end</span><span>Integrated</span><span>Tested</span></div></div>
     </div>
   </div>
 </section>
@@ -311,7 +322,7 @@
     <div class="stats stag">
       <div class="stat"><div class="n">15+</div><div class="l">Live systems built &amp; deployed</div></div>
       <div class="stat"><div class="n">3</div><div class="l">Automation platforms mastered</div></div>
-      <div class="stat"><div class="n">2</div><div class="l">HubSpot certifications earned</div></div>
+      <div class="stat"><div class="n">4</div><div class="l">Testing layers covered — UI, API, database &amp; CI/CD</div></div>
       <div class="stat"><div class="n">24/7</div><div class="l">Automations running on their own</div></div>
     </div>
   </div>
@@ -323,6 +334,22 @@
       <span class="sec-tag">Selected work</span>
       <h2 class="sec-title">Things I've <em>built &amp; shipped</em>.</h2>
       <p class="sec-intro">Every project below is real, live, and clickable. The Python projects are coded from scratch with their source on GitHub; the AI agents link to full workflow screenshots; and the web apps are deployed and running.</p>
+    </div>
+
+    <div class="cat-label fly fly-up" id="qa">QA &amp; Test Automation <span class="count">// Playwright · PyTest · Postman · SQL · GitHub Actions</span></div>
+    <div class="proj-grid stag">
+      <a href="https://github.com/greatman-786/qa-portfolio" target="_blank" class="card qa-card">
+        <div class="card-ico">🧪</div><h4>QA Automation Portfolio</h4>
+        <p>End-to-end automated test suite for an e-commerce app — login, cart and checkout flows — written in Playwright + PyTest, with every test passing in CI on each push.</p>
+        <div class="foot"><span class="live">Live CI</span> · Playwright · PyTest →</div></a>
+      <a href="https://github.com/greatman-786/qa-portfolio" target="_blank" class="card qa-card">
+        <div class="card-ico">🔌</div><h4>API &amp; Database Testing</h4>
+        <p>API tests validating status codes and responses in Postman, plus SQL database tests confirming data actually saves correctly — the layers users never see.</p>
+        <div class="foot">Postman · SQL →</div></a>
+      <a href="https://github.com/greatman-786/qa-portfolio/actions" target="_blank" class="card qa-card">
+        <div class="card-ico">🔁</div><h4>CI/CD Pipeline</h4>
+        <p>GitHub Actions workflow that spins up a clean environment, installs Playwright, and runs the full test suite on every code change — green ticks on every push.</p>
+        <div class="foot"><span class="live">Live</span> · GitHub Actions →</div></a>
     </div>
 
     <div class="cat-label fly fly-up">Python AI Projects <span class="count">// coded from scratch · LangChain · Gemini · ChromaDB</span></div>
@@ -440,16 +467,32 @@
     <div class="sec-head fly fly-left">
       <span class="sec-tag">Certified</span>
       <h2 class="sec-title">Credentials that <em>back it up</em>.</h2>
-      <p class="sec-intro">Beyond hands-on projects, I hold official HubSpot certifications in marketing and CRM — proof of the fundamentals, not just the practice.</p>
+      <p class="sec-intro">Beyond hands-on projects — professional certificates and specializations from Meta, IBM, University of Colorado and HubSpot. Proof of the fundamentals, not just the practice.</p>
     </div>
     <div class="cert-grid stag">
+      <div class="cert"><div class="cert-badge b-blue">📣</div>
+        <div><h4>Social Media Marketing</h4>
+          <div class="issuer">Meta · Professional Certificate</div>
+          <p>Professional certificate from Meta covering social strategy, content, advertising and analytics across the Meta platforms.</p></div></div>
+      <div class="cert"><div class="cert-badge b-violet">🔍</div>
+        <div><h4>SEO Specialization</h4>
+          <div class="issuer">Coursera · Specialization</div>
+          <p>Search engine optimization end to end — keyword research, on-page and technical SEO, and building content that ranks.</p></div></div>
+      <div class="cert"><div class="cert-badge b-green">🧠</div>
+        <div><h4>Prompt Engineering &amp; Generative AI</h4>
+          <div class="issuer">Vanderbilt · IBM via Coursera</div>
+          <p>Prompt Engineering for ChatGPT plus Generative AI Fundamentals — the craft of directing large language models effectively.</p></div></div>
+      <div class="cert"><div class="cert-badge b-violet">🏔️</div>
+        <div><h4>Agile Project Management &amp; Leadership</h4>
+          <div class="issuer">University of Colorado Boulder</div>
+          <p>Two specializations covering agile delivery, sprints, and leading agile teams — the way modern software teams actually work.</p></div></div>
       <div class="cert"><div class="cert-badge">🎓</div>
         <div><h4>Inbound Marketing Optimization</h4>
-          <div class="issuer">HubSpot Academy · 2026</div>
+          <div class="issuer">HubSpot Academy</div>
           <p>Certified in inbound marketing strategy, content marketing, SEO, social media, and email marketing — the full inbound methodology.</p></div></div>
       <div class="cert"><div class="cert-badge">📈</div>
         <div><h4>Digital Marketing</h4>
-          <div class="issuer">HubSpot Academy · 2026</div>
+          <div class="issuer">HubSpot Academy</div>
           <p>Certified across the digital marketing spectrum — SEO, content, social, email and analytics — with hands-on CRM knowledge in HubSpot.</p></div></div>
     </div>
   </div>
@@ -469,7 +512,7 @@
         <div><h4>I design the system</h4><p>A clear plan: what gets built, how the pieces connect, and what you'll see at the end. No jargon, no surprises — you approve before I build anything.</p></div>
         <div class="step-time">≈ 2 days</div></div>
       <div class="step"><div class="step-n">03</div>
-        <div><h4>I build &amp; test</h4><p>I build the real thing, test every path, and fix what breaks before it ever reaches you. You get something solid and reliable, not a rushed demo.</p></div>
+        <div><h4>I build &amp; test</h4><p>I build the real thing and test every path — with real automated tests where it counts — fixing what breaks before it ever reaches you. Solid and reliable, not a rushed demo.</p></div>
         <div class="step-time">≈ 3–5 days</div></div>
       <div class="step"><div class="step-n">04</div>
         <div><h4>I hand it over</h4><p>Clear documentation, a full walkthrough, and support after launch. You own the system completely — I make sure you know exactly how to run it.</p></div>
@@ -493,17 +536,17 @@
     <div class="foot-top">
       <div class="foot-brand">
         <a href="#" class="logo"><span class="mark">A</span> Asad Ullah</a>
-        <p>An AI &amp; automation builder crafting assistants, systems, and websites for teams that want to do more with less.</p>
+        <p>An AI, automation &amp; QA builder crafting assistants, systems, websites and test suites for teams that want to do more with less.</p>
       </div>
       <div class="foot-cols">
         <div class="foot-col"><h5>Studio</h5>
-          <a href="#services">Services</a><a href="#work">Work</a><a href="#certs">Certifications</a><a href="#process">Process</a></div>
+          <a href="#services">Services</a><a href="#work">Work</a><a href="#qa">QA Automation</a><a href="#certs">Certifications</a><a href="#process">Process</a></div>
         <div class="foot-col"><h5>Connect</h5>
           <a href="mailto:asadullah541989@gmail.com">Email</a>
           <a href="https://www.linkedin.com/in/asad-ullah-b0190a236" target="_blank">LinkedIn</a>
           <a href="https://github.com/greatman-786" target="_blank">GitHub</a></div>
         <div class="foot-col"><h5>Build</h5>
-          <a href="#services">AI Assistants</a><a href="#services">Automation</a><a href="#services">CRM Systems</a><a href="#services">Websites</a></div>
+          <a href="#services">AI Assistants</a><a href="#services">Automation</a><a href="#qa">QA &amp; Testing</a><a href="#services">CRM Systems</a><a href="#services">Websites</a></div>
       </div>
     </div>
     <div class="foot-bottom">
