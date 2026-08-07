@@ -165,6 +165,20 @@
   .cert .issuer { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--violet); margin-bottom: 12px; }
   .cert p { color: var(--fog); font-size: 14px; line-height: 1.6; }
 
+  .faq-list { max-width: 820px; }
+  .faq { border-top: 1px solid var(--line); }
+  .faq:last-child { border-bottom: 1px solid var(--line); }
+  .faq-q { width: 100%; background: none; border: none; color: var(--cream); font-family: 'Instrument Serif', serif;
+    font-size: clamp(19px, 2.6vw, 25px); text-align: left; padding: 28px 44px 28px 0; cursor: pointer;
+    position: relative; letter-spacing: -0.01em; transition: color .25s; }
+  .faq-q:hover { color: var(--violet); }
+  .faq-q::after { content: "+"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+    font-family: 'JetBrains Mono', monospace; font-size: 22px; color: var(--violet); transition: transform .3s ease; }
+  .faq.open .faq-q::after { transform: translateY(-50%) rotate(45deg); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height .45s cubic-bezier(.2,.7,.2,1); }
+  .faq-a p { color: var(--fog); font-size: 15px; line-height: 1.7; padding: 0 0 28px; max-width: 66ch; }
+  .faq.open .faq-a { max-height: 300px; }
+
   .steps { display: grid; }
   .step { display: grid; grid-template-columns: 100px 1fr auto; gap: 44px; align-items: start;
     padding: 42px 0; border-top: 1px solid var(--line); transition: padding-left .4s ease, background .4s; }
@@ -236,7 +250,7 @@
       <a href="#work">Work</a>
       <a href="#qa">QA</a>
       <a href="#certs">Certifications</a>
-      <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact" class="nav-cta">Start a project</a>
     </div>
     <div class="burger" onclick="var n=document.querySelector('.nav-links');n.style.display=n.style.display==='flex'?'none':'flex'">
@@ -498,6 +512,42 @@
   </div>
 </section>
 
+<section id="faq" data-bg="#0A1030" data-accent="#5FB8FF">
+  <div class="wrap">
+    <div class="sec-head fly fly-up">
+      <span class="sec-tag">Questions</span>
+      <h2 class="sec-title">Things people <em>usually ask</em>.</h2>
+      <p class="sec-intro">Straight answers before you even have to ask. Anything else — just email me.</p>
+    </div>
+    <div class="faq-list stag">
+      <div class="faq">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">What exactly can you automate for my business?</button>
+        <div class="faq-a"><p>Anything repetitive: lead capture and follow-ups, email logging, content generation, customer replies on your website or WhatsApp, reports, and notifications. If you do it manually every week, there's a good chance I can wire it to run itself using n8n, Zapier or Make.com.</p></div>
+      </div>
+      <div class="faq">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Do I need technical knowledge to use what you build?</button>
+        <div class="faq-a"><p>No. I hand over every system with clear documentation and a full walkthrough. You get something that runs on its own — and you'll know exactly how to use it, check it, and where to reach me if anything needs adjusting.</p></div>
+      </div>
+      <div class="faq">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">How do I know the system will actually work reliably?</button>
+        <div class="faq-a"><p>Because I test it like a QA engineer — with real automated tests, not just a quick click-through. I write Playwright test suites, check APIs, and verify data saves correctly before anything reaches you. Testing is part of the build, not an afterthought.</p></div>
+      </div>
+      <div class="faq">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">How long does a typical project take?</button>
+        <div class="faq-a"><p>Most single automations or AI assistants take about a week from first call to handover: one day to map the friction, two to design, and three to five to build and test. Bigger complete systems take longer — I'll give you an honest timeline before anything starts.</p></div>
+      </div>
+      <div class="faq">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">How much does it cost?</button>
+        <div class="faq-a"><p>It depends on scope, so I don't do vague quotes. After a short call to understand what you need, I'll tell you honestly what it would take — a clear fixed price for the build, with no surprises. If automation won't genuinely save you money, I'll say so.</p></div>
+      </div>
+      <div class="faq">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Do I own the system after it's built?</button>
+        <div class="faq-a"><p>Completely. Everything runs in your own accounts, with your own access. You own the workflows, the code and the data. I make sure of that at handover — no lock-in, no dependency on me to keep it running.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="process" data-bg="#070B1E" data-accent="#8B7BFF">
   <div class="wrap">
     <div class="sec-head fly fly-right">
@@ -540,7 +590,7 @@
       </div>
       <div class="foot-cols">
         <div class="foot-col"><h5>Studio</h5>
-          <a href="#services">Services</a><a href="#work">Work</a><a href="#qa">QA Automation</a><a href="#certs">Certifications</a><a href="#process">Process</a></div>
+          <a href="#services">Services</a><a href="#work">Work</a><a href="#qa">QA Automation</a><a href="#certs">Certifications</a><a href="#faq">FAQ</a></div>
         <div class="foot-col"><h5>Connect</h5>
           <a href="mailto:asadullah541989@gmail.com">Email</a>
           <a href="https://www.linkedin.com/in/asad-ullah-b0190a236" target="_blank">LinkedIn</a>
@@ -555,6 +605,21 @@
     </div>
   </div>
 </footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question","name": "What exactly can you automate for my business?","acceptedAnswer": {"@type": "Answer","text": "Anything repetitive: lead capture and follow-ups, email logging, content generation, customer replies on your website or WhatsApp, reports, and notifications — wired to run automatically using n8n, Zapier or Make.com."}},
+    {"@type": "Question","name": "Do I need technical knowledge to use what you build?","acceptedAnswer": {"@type": "Answer","text": "No. Every system is handed over with clear documentation and a full walkthrough, built to run on its own."}},
+    {"@type": "Question","name": "How do I know the system will actually work reliably?","acceptedAnswer": {"@type": "Answer","text": "Every build is verified with real automated tests — Playwright test suites, API checks and database verification — before handover."}},
+    {"@type": "Question","name": "How long does a typical project take?","acceptedAnswer": {"@type": "Answer","text": "Most single automations or AI assistants take about a week: one day to map, two to design, three to five to build and test."}},
+    {"@type": "Question","name": "How much does it cost?","acceptedAnswer": {"@type": "Answer","text": "Pricing depends on scope. After a short call, you get an honest, clear fixed price for the build with no surprises."}},
+    {"@type": "Question","name": "Do I own the system after it's built?","acceptedAnswer": {"@type": "Answer","text": "Completely. Everything runs in your own accounts — you own the workflows, code and data, with no lock-in."}}
+  ]
+}
+</script>
 
 <script>
   const nav = document.getElementById('nav');
